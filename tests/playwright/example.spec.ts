@@ -8,5 +8,5 @@ test('site is reachable and has expected title', async ({ page }) => {
   if (resp) expect(resp.status()).toBeGreaterThanOrEqual(200);
   // Basic content checks
   await expect(page).toHaveTitle(/Academic Research Skills|Research Skills|Academic/i);
-  await expect(page.locator('h1, header, .site-title')).toHaveCountGreaterThan(0);
+  await expect(page.locator('h1, header, .site-title').first()).toBeVisible();
 });
