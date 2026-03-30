@@ -2,7 +2,7 @@ title: Academic Research Skills
 description: Research skills for Claude Code and academic writing, curated from leading researchers and practitioners
 author: Chuah Kee Man, Galaxy-Dawn, and contributors
 url: "https://lerlerchan.github.io"
-baseurl: "/academic_research_skills"
+baseurl: "/Academic_Research_Skills"
 
 # Build settings
 markdown: kramdown
