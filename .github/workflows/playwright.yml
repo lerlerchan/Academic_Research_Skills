@@ -1,0 +1,32 @@
+name: Playwright site availability
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # daily
+  push:
+    branches:
+      - main
+
+jobs:
+  playwright-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: |
+          npm ci || (npm install)
+      - name: Install Playwright CLI
+        run: |
+          npm install -D @playwright/test && npx playwright install --with-deps
+      - name: Run Playwright tests
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+        run: |
+          npx playwright test tests/playwright --reporter=github
