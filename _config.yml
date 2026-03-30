@@ -1,0 +1,46 @@
+title: Academic Research Skills
+description: Research skills for Claude Code and academic writing, curated from leading researchers and practitioners
+author: Chuah Kee Man, Galaxy-Dawn, and contributors
+url: "https://lerlerchan.github.io"
+baseurl: "/academic_research_skills"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: null
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .git
+  - .gitignore
+  - .superpowers
+  - Gemfile
+  - Gemfile.lock
+  - DESIGN.md
+  - README.md
+  - node_modules
+
+# Collections (optional, for future expansion)
+collections:
+  skills:
+    output: true
+    permalink: /skills/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "skills"
+    values:
+      layout: "skill"

@@ -1,0 +1,127 @@
+<h2>GitHub Pages Site Layout</h2>
+<p class="subtitle">Which layout feels right for researchers browsing academic skills?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="A" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup" style="font-size:0.8em">
+        <div class="mock-nav" style="font-size:0.85em">📚 Academic Research Skills &nbsp;|&nbsp; Skills &nbsp;|&nbsp; Install &nbsp;|&nbsp; GitHub</div>
+        <div style="display:flex;gap:10px;padding:8px">
+          <div class="mock-sidebar" style="width:160px;min-width:160px;font-size:0.8em">
+            <div style="font-weight:bold;margin-bottom:6px">Categories</div>
+            <div style="color:#7c3aed">▶ Literature Review</div>
+            <div>Academic Writing</div>
+            <div>Citations</div>
+            <div>Data Analysis</div>
+            <div>Methodology</div>
+            <div>Dissemination</div>
+          </div>
+          <div style="flex:1">
+            <div style="background:#f3f4f6;border-radius:6px;padding:8px;margin-bottom:6px">
+              <div style="font-weight:bold;font-size:0.9em">🔍 Literature Search Strategy</div>
+              <div style="font-size:0.75em;color:#555;margin:3px 0">Helps Claude guide you through systematic database searches, keyword strategies, and inclusion/exclusion criteria.</div>
+              <div style="display:flex;gap:6px;margin-top:4px">
+                <span style="background:#ede9fe;color:#7c3aed;padding:2px 7px;border-radius:10px;font-size:0.7em">General</span>
+                <button class="mock-button" style="padding:2px 8px;font-size:0.7em">⬇ Download</button>
+              </div>
+            </div>
+            <div style="background:#f3f4f6;border-radius:6px;padding:8px">
+              <div style="font-weight:bold;font-size:0.9em">📝 PRISMA Flow Assistant</div>
+              <div style="font-size:0.75em;color:#555;margin:3px 0">Generates PRISMA flow diagrams and tracks screening decisions for systematic reviews.</div>
+              <div style="display:flex;gap:6px;margin-top:4px">
+                <span style="background:#dbeafe;color:#1d4ed8;padding:2px 7px;border-radius:10px;font-size:0.7em">Medical</span>
+                <button class="mock-button" style="padding:2px 8px;font-size:0.7em">⬇ Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Sidebar + Card List</h3>
+      <p>Category sidebar on left, skill cards on right. Familiar docs-site pattern. Easy to filter by category.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="B" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup" style="font-size:0.8em">
+        <div class="mock-nav" style="font-size:0.85em">📚 Academic Research Skills &nbsp;|&nbsp; Browse &nbsp;|&nbsp; Install &nbsp;|&nbsp; GitHub</div>
+        <div style="padding:8px">
+          <div style="text-align:center;margin-bottom:8px">
+            <div style="font-size:1em;font-weight:bold">Research Skills for Claude Code</div>
+            <div style="font-size:0.75em;color:#666">21 skills across 6 categories</div>
+            <input class="mock-input" placeholder="🔍 Search skills..." style="width:80%;margin-top:5px;font-size:0.8em">
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:8px">
+            <span style="background:#7c3aed;color:white;padding:2px 10px;border-radius:12px;font-size:0.75em">All</span>
+            <span style="background:#f3f4f6;padding:2px 10px;border-radius:12px;font-size:0.75em">Literature</span>
+            <span style="background:#f3f4f6;padding:2px 10px;border-radius:12px;font-size:0.75em">Writing</span>
+            <span style="background:#f3f4f6;padding:2px 10px;border-radius:12px;font-size:0.75em">Data</span>
+            <span style="background:#f3f4f6;padding:2px 10px;border-radius:12px;font-size:0.75em">Methods</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:6px">
+              <div style="font-weight:bold;font-size:0.82em">🔍 Lit Search Strategy</div>
+              <div style="font-size:0.7em;color:#555">Systematic DB search guidance</div>
+              <div style="margin-top:4px;display:flex;gap:4px">
+                <span style="background:#ede9fe;color:#7c3aed;padding:1px 6px;border-radius:8px;font-size:0.65em">General</span>
+                <button class="mock-button" style="padding:1px 6px;font-size:0.65em">⬇</button>
+              </div>
+            </div>
+            <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:6px">
+              <div style="font-weight:bold;font-size:0.82em">✍️ Abstract Writer</div>
+              <div style="font-size:0.7em;color:#555">Structure & draft abstracts</div>
+              <div style="margin-top:4px;display:flex;gap:4px">
+                <span style="background:#ede9fe;color:#7c3aed;padding:1px 6px;border-radius:8px;font-size:0.65em">General</span>
+                <button class="mock-button" style="padding:1px 6px;font-size:0.65em">⬇</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Search-First Grid</h3>
+      <p>Prominent search bar, pill filters, responsive grid. Fast to navigate, works well on mobile.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="C" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup" style="font-size:0.8em">
+        <div class="mock-nav" style="font-size:0.85em">📚 Academic Research Skills</div>
+        <div style="padding:8px">
+          <div style="margin-bottom:8px">
+            <div style="font-size:1em;font-weight:bold">Literature Review</div>
+            <div style="font-size:0.72em;color:#888">6 skills · General + Medical variants</div>
+          </div>
+          <div style="background:#f9fafb;border-left:3px solid #7c3aed;border-radius:0 6px 6px 0;padding:7px;margin-bottom:5px">
+            <div style="font-weight:bold;font-size:0.85em">🔍 Literature Search Strategy</div>
+            <div style="font-size:0.72em;color:#555;margin:2px 0">Guides systematic searches across PubMed, Scopus, Web of Science. Helps build PICO/SPIDER frameworks and track results.</div>
+            <div style="font-size:0.7em;color:#888;margin-top:3px">Used by: <b>Claude Code</b> · Trigger: <code style="background:#f3f4f6;padding:1px 4px;border-radius:3px">/lit-search</code></div>
+            <div style="margin-top:5px;display:flex;gap:5px">
+              <button class="mock-button" style="font-size:0.72em;padding:2px 8px">⬇ Download .md</button>
+              <button class="mock-button" style="font-size:0.72em;padding:2px 8px;background:#f3f4f6;color:#333">📋 Copy</button>
+            </div>
+          </div>
+          <div style="background:#f9fafb;border-left:3px solid #1d4ed8;border-radius:0 6px 6px 0;padding:7px">
+            <div style="font-weight:bold;font-size:0.85em">🧬 PRISMA Flow Assistant <span style="font-size:0.75em;color:#1d4ed8">[Medical]</span></div>
+            <div style="font-size:0.72em;color:#555;margin:2px 0">Automates PRISMA 2020 flow tracking for systematic reviews.</div>
+            <div style="margin-top:5px;display:flex;gap:5px">
+              <button class="mock-button" style="font-size:0.72em;padding:2px 8px">⬇ Download .md</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Grouped List (Docs-style)</h3>
+      <p>Scrollable page grouped by category with rich detail per skill. Shows trigger command, description, variants. More like a reference manual.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:16px">Click your preferred layout (or tell me in the terminal). You can mix ideas too.</p>

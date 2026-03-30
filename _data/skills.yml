@@ -1,0 +1,65 @@
+- id: slr-prisma
+  name: Systematic Literature Review — PRISMA 2020
+  category: Literature Review
+  emoji: 🔍
+  description: "Guide users through writing a systematic literature review (SLR) following the PRISMA 2020 framework. Produces a Word document manuscript in strict journal article format, generates an annotated PRISMA flow diagram, and enforces APA 7th Edition referencing throughout. Covers the full 27-item PRISMA 2020 checklist with phase-by-phase interviewing and section-by-section drafting."
+  repository: "https://github.com/lerlerchan/slr-prisma"
+  asset_url: "https://raw.githubusercontent.com/lerlerchan/slr-prisma/main/SKILL.md"
+  asset_type: "md + references"
+  author: "Chuah Kee Man"
+  tags: [systematic-review, PRISMA, literature-review, research-methods, APA-citation]
+
+- id: dbp-translator
+  name: English to Bahasa Melayu Translator
+  category: General
+  emoji: 🌐
+  description: "Translate English text into standard Bahasa Melayu (Malaysian Malay) following Dewan Bahasa dan Pustaka (DBP) conventions. Handles formal documents, technical/academic content, creative writing, and marketing copy. Ensures fluent, natural-sounding Malaysian Malay with DBP-approved terminology and standard spelling conventions."
+  repository: "https://github.com/keemanxp/dbp-translator-claude"
+  asset_url: "https://raw.githubusercontent.com/keemanxp/dbp-translator-claude/main/SKILL.md"
+  asset_type: "md"
+  author: "Chuah Kee Man"
+  tags: [translation, Malay, Bahasa-Melayu, DBP, Malaysian-language]
+
+- id: apa-referencing
+  name: APA 7th Edition Referencing & Citation
+  category: Writing
+  emoji: 📚
+  description: "Format, check, correct, and verify references and citations in APA 7th Edition style. Supports 20+ source types including books, journal articles, conference papers, theses, webpages, and social media. Includes reference verification using web search to detect fabricated references and convert from other citation styles."
+  repository: "https://github.com/keemanxp/apa-referencing-skill"
+  asset_url: "https://raw.githubusercontent.com/keemanxp/apa-referencing-skill/main/SKILL.md"
+  asset_type: "md + references"
+  author: "Chuah Kee Man"
+  tags: [APA, referencing, citations, academic-writing, citation-verification]
+
+- id: humanizer
+  name: Remove AI Writing Patterns
+  category: Writing
+  emoji: ✍️
+  description: "Remove signs of AI-generated writing from text to make it sound more natural and human-written. Detects and fixes 10+ AI patterns including inflated symbolism, promotional language, superficial -ing analyses, vague attributions, em dash overuse, rule of three, and excessive conjunctive phrases. Also adds personality and voice to text."
+  repository: "https://github.com/blader/humanizer"
+  asset_url: "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md"
+  asset_type: "md"
+  author: "blader"
+  tags: [AI-detection, writing-improvement, humanize-text, editing]
+
+- id: claude-scholar
+  name: "Claude Scholar: Research Ecosystem"
+  category: Methods
+  emoji: 🧠
+  description: "Semi-automated research assistant for the full academic lifecycle: research ideation, ML development, experiment analysis, paper writing, self-review, submission/rebuttal, and post-acceptance. Includes 47 embedded skills, Obsidian integration, Zotero bridge, and 50+ slash commands. Supports top conferences (NeurIPS, ICML, ICLR) and journals (Nature, Science, Cell)."
+  repository: "https://github.com/Galaxy-Dawn/claude-scholar"
+  asset_url: "https://raw.githubusercontent.com/Galaxy-Dawn/claude-scholar/main/CLAUDE.md"
+  asset_type: "system (md + agents)"
+  author: "Galaxy-Dawn"
+  tags: [research-lifecycle, ML-workflow, academic-writing, Obsidian, Zotero, paper-writing]
+
+- id: uncommon-prompting
+  name: Uncommon Prompting Tips for Students
+  category: Methods
+  emoji: 💡
+  description: "20 creative prompting techniques for learning: rubber duck debugging, time traveler perspective, constraint game, Socratic reverse questioning, format hijack, mistake hunter, minimalist challenge, connection web, pre-mortem, explanation ladder, devil's advocate, memory palace builder, and more. Designed to help students understand and retain material across STEM and humanities subjects."
+  repository: "https://github.com/keemanxp/uncommon-prompting-tips"
+  asset_url: "https://raw.githubusercontent.com/keemanxp/uncommon-prompting-tips/main/README.md"
+  asset_type: "md"
+  author: "Chuah Kee Man"
+  tags: [prompting, learning-hacks, study-tips, creativity, interactive-learning]

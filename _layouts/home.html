@@ -1,0 +1,130 @@
+---
+layout: default
+---
+
+<div class="text-center mb-12">
+  <h1 class="text-4xl font-bold mb-2">{{ site.title }}</h1>
+  <p class="text-lg text-gray-600">{{ site.description }}</p>
+  <p class="text-sm text-gray-500 mt-1">{{ site.data.skills | size }} skills · 6 categories</p>
+</div>
+
+<!-- Search bar -->
+<div class="max-w-2xl mx-auto mb-8">
+  <div class="relative">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="🔍 Search skills by name or topic..."
+      class="w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-purple-700"
+    >
+  </div>
+</div>
+
+<!-- Category filters -->
+<div class="flex flex-wrap justify-center gap-2 mb-8">
+  <button class="category-filter px-4 py-2 rounded-full text-sm font-medium bg-purple-700 text-white" data-category="all">
+    All
+  </button>
+  {% assign categories = site.data.skills | map: 'category' | uniq | sort %}
+  {% for category in categories %}
+    <button class="category-filter px-4 py-2 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300" data-category="{{ category | downcase | replace: ' ', '-' }}">
+      {{ category }}
+    </button>
+  {% endfor %}
+</div>
+
+<!-- Skills grid -->
+<div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {% for skill in site.data.skills %}
+    <div class="skill-card bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-purple-300 cursor-pointer transition-all" 
+         data-id="{{ skill.id }}"
+         data-category="{{ skill.category | downcase | replace: ' ', '-' }}"
+         data-title="{{ skill.name | downcase }}"
+         data-description="{{ skill.description | downcase }}"
+         onclick="location.href='{{ site.baseurl }}/skills/{{ skill.id }}/'">
+      
+      <div class="flex items-start justify-between mb-2">
+        <span class="text-3xl">{{ skill.emoji }}</span>
+        <span class="text-xs font-medium px-2 py-1 bg-purple-100 text-purple-700 rounded">{{ skill.category }}</span>
+      </div>
+      
+      <h3 class="text-lg font-bold mb-2 text-gray-900">{{ skill.name }}</h3>
+      <p class="text-sm text-gray-600 mb-4 line-clamp-3">{{ skill.description }}</p>
+      
+      <div class="flex items-center justify-between text-xs text-gray-500">
+        <span>By {{ skill.author }}</span>
+        <a href="{{ skill.repository }}" class="text-purple-700 hover:underline" onclick="event.stopPropagation()">
+          → Repo
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- No results message -->
+<div id="noResults" class="text-center py-12 hidden">
+  <p class="text-gray-500 text-lg">No skills found. Try a different search.</p>
+</div>
+
+<style>
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchInput');
+  const skillCards = document.querySelectorAll('.skill-card');
+  const categoryButtons = document.querySelectorAll('.category-filter');
+  const noResults = document.getElementById('noResults');
+  const grid = document.getElementById('skillsGrid');
+  
+  let activeCategory = 'all';
+  
+  function filterSkills() {
+    const searchTerm = searchInput.value.toLowerCase();
+    let visibleCount = 0;
+    
+    skillCards.forEach(card => {
+      const title = card.dataset.title;
+      const description = card.dataset.description;
+      const category = card.dataset.category;
+      
+      // Check category filter
+      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      
+      // Check search filter
+      const matchesSearch = searchTerm === '' || 
+                           title.includes(searchTerm) || 
+                           description.includes(searchTerm);
+      
+      const isVisible = matchesCategory && matchesSearch;
+      card.style.display = isVisible ? 'block' : 'none';
+      
+      if (isVisible) visibleCount++;
+    });
+    
+    noResults.classList.toggle('hidden', visibleCount > 0);
+  }
+  
+  searchInput.addEventListener('keyup', filterSkills);
+  
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      categoryButtons.forEach(b => {
+        b.classList.remove('bg-purple-700', 'text-white');
+        b.classList.add('bg-gray-200', 'text-gray-800');
+      });
+      this.classList.remove('bg-gray-200', 'text-gray-800');
+      this.classList.add('bg-purple-700', 'text-white');
+      
+      activeCategory = this.dataset.category;
+      filterSkills();
+    });
+  });
+});
+</script>
