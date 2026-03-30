@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const SITE_URL = 'https://lerlerchan.github.io/academic_research_skills/';
+const SITE_URL = 'https://lerlerchan.github.io/Academic_Research_Skills/';
 
 test('site is reachable and has expected title', async ({ page }) => {
   const resp = await page.goto(SITE_URL, { waitUntil: 'domcontentloaded' });
