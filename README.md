@@ -2,7 +2,7 @@
 
 Curated research skills for Claude Code, compiled from leading researchers and practitioners.
 
-**Website:** https://lerlerchan.github.io/academic_research_skills/
+**Website:** https://lerlerchan.github.io/Academic_Research_Skills/
 
 ## Skills Included
 
@@ -88,7 +88,7 @@ academic_research_skills/
    bundle exec jekyll serve
    ```
 
-4. **Visit:** http://localhost:4000/academic_research_skills
+4. **Visit:** http://localhost:4000/Academic_Research_Skills
 
 ### Making Changes
 

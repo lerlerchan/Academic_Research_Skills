@@ -43,9 +43,9 @@ layout: default
 
   <!-- Action buttons -->
   <div class="flex gap-4 mb-8">
-    <a href="{{ page.asset_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-800">
+    <button onclick="downloadSkill('{{ page.asset_url }}', '{{ page.name | slugify }}.md')" class="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-800 cursor-pointer border-0">
       ⬇ Download Skill
-    </a>
+    </button>
     <a href="{{ page.repository }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-200 text-gray-900 rounded-lg font-medium hover:bg-gray-300">
       → View on GitHub
     </a>
@@ -79,3 +79,22 @@ layout: default
     <p>Questions? <a href="https://github.com/lerlerchan/academic_research_skills/issues" class="text-purple-700 hover:underline">Open an issue on GitHub</a></p>
   </div>
 </div>
+
+<script>
+async function downloadSkill(url, filename) {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(blobUrl);
+  } catch (e) {
+    window.open(url, '_blank');
+  }
+}
+</script>
