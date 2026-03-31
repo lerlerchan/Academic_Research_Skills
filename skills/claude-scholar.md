@@ -1,7 +1,7 @@
 ---
 layout: skill
 permalink: /skills/claude-scholar/
-name: Claude Scholar: Research Ecosystem
+name: "Claude Scholar: Research Ecosystem"
 emoji: 🧠
 category: Methods
 description: Semi-automated research assistant for the full academic lifecycle with 47 embedded skills, Obsidian integration, and Zotero bridge.
