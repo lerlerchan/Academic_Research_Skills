@@ -24,3 +24,10 @@ test('uncommon-prompting skill page is reachable', async ({ page }) => {
   if (resp) expect(resp.status()).toBe(200);
   await expect(page.locator('h1').first()).toContainText('Uncommon Prompting');
 });
+
+test('context engineering library page is reachable', async ({ page }) => {
+  const resp = await page.goto(SITE_URL + 'context-engineering-library/', { waitUntil: 'domcontentloaded' });
+  expect(resp).not.toBeNull();
+  if (resp) expect(resp.status()).toBe(200);
+  await expect(page.locator('h1').first()).toContainText('Context Engineering Library');
+});
