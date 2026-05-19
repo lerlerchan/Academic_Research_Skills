@@ -166,6 +166,18 @@ Each skill retains its original license. This site framework is provided as-is f
 
 ---
 
+## Sponsor
+
+<p align="center">
+  <a href="https://github.com/cyysky" target="_blank">
+    <strong>CHONG YOE YAT (cyysky)</strong><br>
+    Software development · System integration<br>
+    Computer vision automation product development
+  </a>
+</p>
+
+---
+
 ## Support
 
 - 📧 Email: [Your email if applicable]
