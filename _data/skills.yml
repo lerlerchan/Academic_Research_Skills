@@ -63,3 +63,25 @@
   asset_type: "md"
   author: "Chuah Kee Man"
   tags: [prompting, learning-hacks, study-tips, creativity, interactive-learning]
+
+- id: thematic-analysis
+  name: Thematic Analysis — Braun & Clarke
+  category: Literature Review
+  emoji: 🎯
+  description: "Rigorous thematic analysis following Braun and Clarke's six-phase framework. Produces a manuscript-style Word document and an annotated thematic map. Covers Phase 0 (research question), Phase 1-6 (familiarisation through theme definition), 15-point quality checklist, and common pitfalls."
+  repository: "https://github.com/keemanxp/thematic-analysis-skill"
+  asset_url: "https://raw.githubusercontent.com/keemanxp/thematic-analysis-skill/main/README.md"
+  asset_type: "md"
+  author: "Chuah Kee Man"
+  tags: [thematic-analysis, qualitative-research, Braun-Clarke, research-methods, academic-writing]
+
+- id: friendlyr2
+  name: "friendlyR2 — Q1 Journal Reviewer"
+  category: Writing
+  emoji: 🎓
+  description: "Act as a strict but constructive senior reviewer for a top-quartile journal across any discipline. Applies Q1 standards to manuscripts, abstracts, and revisions. Produces standard reviewer reports: summary, major/minor comments, and recommendation. Triggers on phrases like \"critique this\", \"review my manuscript\", or academic prose pasted for peer-review assessment."
+  repository: "https://github.com/keemanxp/friendlyr2"
+  asset_url: "https://raw.githubusercontent.com/keemanxp/friendlyr2/main/SKILL.md"
+  asset_type: "md"
+  author: "Chuah Kee Man"
+  tags: [peer-review, manuscript-review, academic-writing, Q1-journal, reviewer-report]
